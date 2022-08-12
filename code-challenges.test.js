@@ -10,19 +10,65 @@
 // Reminder: The test will call your function
 // Run the file with the following command: $ yarn jest
 
+// test template
+// // a describe method that lists the name of the function OR naming of the particular test.
+// describe("hello", () => {
+//   // a test/it method, nested within the describe block, that in plain words, describes that the function does.
+//   it("returns a string that says hi", () => {
+//     //an expect method, nested within the test block, calling on the hello() function, followed by the .toEqual() matcher that checks the expected output of the function return.
+//     expect(hello()).toEqual("hi");
+//   });
+// });
+
+// 1: Write the test first!
+// 2: Run your testing suit to see a failing test
+// 3: Write the code
+// 4: Run your testing suit to see your test pass
+// 5: Refactor if necessary
+
 // --------------------INSTRUCTOR EXAMPLE: Create a function that takes in an array of numbers and returns an array with all the numbers multiplied by 3.
 
 // a) Create a test with expect statements for each of the variables provided.
 
-const numbersArray1 = [6, 7, 8, 9, 10]
-// Expected output: [18, 21, 24, 27, 30]
-const numbersArray2 = [24, 27, 30, 33, 36]
-// Expected output: [72, 81, 90, 99, 108]
+// a describe method that lists the name of the function OR naming of the particular test.
+describe("mult3", () => {
+  // a test/it method, nested within the describe block, that in plain words, describes that the function does.
+  it("takes in an array of numbers and returns an array with all the numbers multiplied by 3", () => {
+    //an expect method, nested within the test block, calling on the hello() function, followed by the .toEqual() matcher that checks the expected output of the function return.
 
+    const numbersArray1 = [6, 7, 8, 9, 10]
+    // Expected output: [18, 21, 24, 27, 30]
+    const numbersArray2 = [24, 27, 30, 33, 36]
+    // Expected output: [72, 81, 90, 99, 108]
+
+    expect(mult3(numbersArray1)).toEqual([18, 21, 24, 27, 30]);
+    expect(mult3(numbersArray2)).toEqual([72, 81, 90, 99, 108]);
+  });
+});
+
+// Good failure:  FAIL  ./code-challenges.test.js
+// mult3
+//   ✕ takes in an array of numbers and returns an array with all the numbers multiplied by 3 (1 ms)
+
+// ● mult3 › takes in an array of numbers and returns an array with all the numbers multiplied by 3
+
+//   ReferenceError: mult3 is not defined
 
 // b) Create the function that makes the test pass.
 
+// Psuedocode
+// Input: array of numbers
+// Output: array with all the numbers multiplied by 3
+// declare a function named mult3
+// returning same length array ---> map to iterate across the values in the array and multiply by 3
 
+const mult3 = (array) => {
+ return array.map(value => value * 3)
+}
+
+// Pass:  PASS  ./code-challenges.test.js
+// mult3
+//   ✓ takes in an array of numbers and returns an array with all the numbers multiplied by 3 (1 ms)
 
 // --------------------1) Create a function that takes a object as an argument and decides if the number inside it is evenly divisible by three or not.
 
