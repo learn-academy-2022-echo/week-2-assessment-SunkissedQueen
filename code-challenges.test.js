@@ -11,14 +11,14 @@
 // Run the file with the following command: $ yarn jest
 
 // test template
-// // a describe method that lists the name of the function OR naming of the particular test.
-// describe("hello", () => {
-//   // a test/it method, nested within the describe block, that in plain words, describes that the function does.
-//   it("returns a string that says hi", () => {
-//     //an expect method, nested within the test block, calling on the hello() function, followed by the .toEqual() matcher that checks the expected output of the function return.
-//     expect(hello()).toEqual("hi");
-//   });
-// });
+// a describe method that lists the name of the function OR naming of the particular test.
+describe("hello", () => {
+  // a test/it method, nested within the describe block, that in plain words, describes that the function does.
+  it("returns a string that says hi", () => {
+    //an expect method, nested within the test block, calling on the hello() function, followed by the .toEqual() matcher that checks the expected output of the function return.
+    expect(hello()).toEqual("hi");
+  });
+});
 
 // 1: Write the test first!
 // 2: Run your testing suit to see a failing test
